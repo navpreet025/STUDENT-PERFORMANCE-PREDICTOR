@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Performance Predictor 🎓</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🎓 Student Performance Predictor</h1>
+    <form action="/predict" method="post" class="form-card">
+
+        <label>Study Hours per Day</label>
+        <select name="study_hours">
+            <option value="2">1–2 hrs</option>
+            <option value="4">3–4 hrs</option>
+            <option value="6">5–6 hrs</option>
+            <option value="8">7–8 hrs</option>
+            <option value="10">9–10 hrs</option>
+        </select>
+
+        <label>Sleep Quality</label>
+        <select name="sleep_quality">
+            <option value="1">Poor</option>
+            <option value="2">Below Average</option>
+            <option value="3">Average</option>
+            <option value="4">Good</option>
+            <option value="5">Excellent</option>
+        </select>
+
+        <label>Class Participation</label>
+        <select name="participation">
+            <option value="1">Low</option>
+            <option value="3">Moderate</option>
+            <option value="5">Active</option>
+        </select>
+
+        <label>Extracurricular Activities</label>
+        <select name="activities">
+            <option value="0">None</option>
+            <option value="1">Occasional</option>
+            <option value="2">Regular</option>
+            <option value="3">Highly Active</option>
+        </select>
+
+        <label>Internet Usage (hrs/day)</label>
+        <select name="internet_usage">
+            <option value="1">Less than 2</option>
+            <option value="2">2–3 hrs</option>
+            <option value="3">3–4 hrs</option>
+            <option value="4">4–6 hrs</option>
+            <option value="5">More than 6</option>
+        </select>
+
+        <label>Attendance (%)</label>
+        <select name="attendance">
+            <option value="60">60–70%</option>
+            <option value="75">75–85%</option>
+            <option value="90">90–95%</option>
+            <option value="98">Above 95%</option>
+        </select>
+
+        <label>Assignments Submitted</label>
+        <select name="assignments_submitted">
+            <option value="3">Few</option>
+            <option value="5">Some</option>
+            <option value="8">Most</option>
+            <option value="10">All</option>
+        </select>
+
+        <button type="submit">🔍 Predict Performance</button>
+    </form>
+</div>
+</body>
+</html>

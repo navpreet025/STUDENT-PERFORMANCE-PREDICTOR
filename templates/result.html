@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="result-container">
+    <h1>📊 Predicted Score: {{ score }}</h1>
+    <div class="progress-bar">
+        <div class="fill" style="width: {{ score }}%; background: {{ color }};"></div>
+    </div>
+    <h2 style="color: {{ color }};">{{ category }}</h2>
+    <a href="/" class="back-btn">🔙 Try Again</a>
+</div>
+</body>
+</html>
